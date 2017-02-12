@@ -25,7 +25,7 @@ def main():
 		for i in  row:
 			td_tag = i.findAll('td')
 			if td_tag:
-				sql = "insert into college (college_name, college_prefix) values(%s,%s)" %(td_tag[1].text,td_tag[2].text)
+				sql = "insert into college (college_name, college_prefix) values('%s','%s')" %(td_tag[1].text,td_tag[2].text)
 				cursor.execute(sql)
 
 
