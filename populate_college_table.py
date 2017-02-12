@@ -20,8 +20,7 @@ def main():
 	soup = BeautifulSoup(page,'lxml')
 	tables= soup.findAll("table",{"class":"table table-striped table-hover"})
 
-	 table in tables:
-	#pdb.set_trace()
+	for table in tables:
 		row  = table.findAll("tr")
 		for i in  row:
 			td_tag = i.findAll('td')
