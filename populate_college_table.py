@@ -28,6 +28,7 @@ def main():
 				sql = "insert into college (college_name, college_prefix) values('%s','%s')" %(td_tag[1].text,td_tag[2].text)
 				cursor.execute(sql)
 
+cursor.close()
 
 if __name__ == '__main__':
 	main()
